@@ -6,7 +6,7 @@
 
 * Install [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-* Install `ctags` (required for [tagbar](https://github.com/majutsushi/tagbar))
+* Install [ctags](https://github.com/universal-ctags/ctags) (required for [tagbar](https://github.com/majutsushi/tagbar))
 
 * Clone this repo to `~/.config/nvim`
 
