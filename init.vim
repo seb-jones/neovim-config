@@ -11,6 +11,8 @@ Plug 'posva/vim-vue'
 Plug 'Shougo/context_filetype.vim'
 Plug 'tyru/caw.vim'
 
+Plug 'jremmen/vim-ripgrep'
+
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
@@ -139,7 +141,6 @@ nnoremap <C-p> :FZF<CR>
 "
 " Fix syntax highlighting on vue files
 "
-
 autocmd FileType vue syntax sync fromstart
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
