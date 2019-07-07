@@ -4,11 +4,17 @@
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'tpope/vim-repeat'
+Plug 'Shougo/context_filetype.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+
+Plug 'tpope/vim-surround'
+
 Plug 'flazz/vim-colorschemes'
 Plug 'jwalton512/vim-blade'
 Plug 'posva/vim-vue'
 
-Plug 'Shougo/context_filetype.vim'
 Plug 'tyru/caw.vim'
 
 Plug 'jremmen/vim-ripgrep'
@@ -22,6 +28,9 @@ Plug 'kristijanhusak/deoplete-phpactor'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'cohama/lexima.vim'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
