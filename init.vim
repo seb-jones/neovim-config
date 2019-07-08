@@ -154,3 +154,9 @@ nnoremap <C-p> :FZF<CR>
 autocmd FileType vue syntax sync fromstart
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
+
+"
+" Use '+' register (and thus the system clipboard) for all unnamed 
+" clipboard-based operations
+"
+set clipboard+=unnamedplus
