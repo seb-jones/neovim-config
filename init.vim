@@ -35,6 +35,7 @@ Plug 'majutsushi/tagbar'
 call plug#end()
 
 colors gruvbox
+set background=dark
 
 set guifont=DejaVu\ Sans\ Mono:h16
 
