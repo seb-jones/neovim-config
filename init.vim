@@ -160,3 +160,10 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 " clipboard-based operations
 "
 set clipboard+=unnamedplus
+
+nnoremap <C-n> :Tagbar<CR>
+
+"
+" Set terminal escape key to 'Control + /'
+" 
+:tnoremap <C-q> <C-\><C-n>
