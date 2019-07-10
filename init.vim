@@ -10,6 +10,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 
 Plug 'flazz/vim-colorschemes'
 Plug 'jwalton512/vim-blade'
