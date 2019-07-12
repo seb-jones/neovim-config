@@ -187,11 +187,12 @@ nnoremap <C-n> :Tagbar<CR>
 " Configure linters
 "
 let g:ale_linters = {
-            \   'javascript': ['eslint'],
-            \}
+           \   'javascript': ['eslint'],
+           \}
 
 let g:ale_fixers = {
             \   'php': ['phpcbf'],
+            \   'javascript': ['prettier'],
             \}
 
 let g:ale_fix_on_save = 1
