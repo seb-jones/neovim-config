@@ -33,6 +33,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'cohama/lexima.vim'
 Plug 'majutsushi/tagbar'
 
+Plug 'w0rp/ale'
+
 call plug#end()
 
 colors gruvbox
@@ -176,3 +178,21 @@ nnoremap <C-n> :Tagbar<CR>
 " Set terminal escape key to 'Control + /'
 " 
 :tnoremap <C-q> <C-\><C-n>
+
+"
+" Configure linters
+"
+let g:ale_linters = {
+            \   'javascript': ['eslint'],
+            \}
+
+let g:ale_fixers = {
+            \   'php': ['phpcbf'],
+            \}
+
+let g:ale_fix_on_save = 1
+
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
