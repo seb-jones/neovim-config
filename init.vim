@@ -192,7 +192,8 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
             \   'php': ['phpcbf'],
-            \   'javascript': ['prettier'],
+            \   'javascript': ['prettier', 'eslint'],
+            \   'vue': ['prettier', 'eslint'],
             \}
 
 let g:ale_fix_on_save = 1
