@@ -188,6 +188,7 @@ nnoremap <C-n> :Tagbar<CR>
 "
 let g:ale_linters = {
            \   'javascript': ['eslint'],
+           \   'go': ['golint'],
            \}
 
 let g:ale_fixers = {
