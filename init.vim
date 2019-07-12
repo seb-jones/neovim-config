@@ -23,6 +23,8 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'phpactor/phpactor' , { 'do': 'composer install', 'for': 'php' }
 Plug 'kristijanhusak/deoplete-phpactor'
@@ -117,6 +119,8 @@ let g:deoplete#enable_at_startup = 1
 
 let g:deoplete#sources = {}
 let g:deoplete#sources.php = ['omni', 'phpactor', 'ultisnips', 'buffer']
+
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 "
 " Phpactor
