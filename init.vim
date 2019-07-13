@@ -195,6 +195,7 @@ let g:ale_fixers = {
             \   'php': ['phpcbf'],
             \   'javascript': ['prettier', 'eslint'],
             \   'vue': ['prettier', 'eslint'],
+            \   'go': ['goimports']
             \}
 
 let g:ale_fix_on_save = 1
