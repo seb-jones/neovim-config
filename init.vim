@@ -193,8 +193,8 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
             \   'php': ['phpcbf'],
-            \   'javascript': ['prettier', 'eslint'],
-            \   'vue': ['prettier', 'eslint'],
+            \   'javascript': ['eslint'],
+            \   'vue': ['eslint'],
             \   'go': ['goimports']
             \}
 
