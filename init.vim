@@ -211,3 +211,13 @@ nmap <silent> ]W <Plug>(ale_last)
 "
 
 set undofile
+
+"
+" Auto-closing braces
+"
+let g:lexima_enable_basic_rules=0
+
+"
+" Enable Mouse Controls
+"
+set mouse=a
