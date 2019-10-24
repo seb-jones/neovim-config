@@ -23,8 +23,6 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'phpactor/phpactor' , { 'do': 'composer install', 'for': 'php' }
 Plug 'kristijanhusak/deoplete-phpactor'
