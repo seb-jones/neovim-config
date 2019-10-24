@@ -16,7 +16,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'jwalton512/vim-blade'
 Plug 'posva/vim-vue'
 
-Plug 'tyru/caw.vim'
+Plug 'tomtom/tcomment_vim'
 
 Plug 'jremmen/vim-ripgrep'
 
@@ -199,7 +199,7 @@ let g:ale_fixers = {
             \   'go': ['goimports']
             \}
 
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
