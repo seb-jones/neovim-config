@@ -70,7 +70,7 @@ nnoremap <C-Right> :vertical resize +5<CR>
 " tnoremap <C-Right> :vertical resize +5<CR>
 
 nnoremap <C-s> :sp<CR>
-nnoremap <C-l> :vsp<CR>
+nnoremap <C-i> :vsp<CR>
 
 " Buffer Keymaps
 nnoremap [b :bp<CR>
