@@ -1,0 +1,37 @@
+snippet arr "Arrow function" w
+(${1:paramters}) => {
+	${2:body}
+}
+endsnippet
+
+snippet arri "Inline arrow function" w
+(${1:paramters}) => ${2:body}
+endsnippet
+
+snippet com "Component"
+<template>
+	${1}
+</template>
+
+<script>
+export default {
+    props: {
+		${2}
+    },
+    data() {
+        return {
+			${3}
+        };
+    },
+    computed: {
+		${4}
+    },
+    methods: {
+		${5}
+    },
+	created() {
+		${6}
+	},
+}
+</script>
+endsnippet
