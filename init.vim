@@ -37,10 +37,12 @@ Plug 'w0rp/ale'
 
 call plug#end()
 
-colors gruvbox
-set background=dark
+" colors gruvbox
+" set background=dark
+colorscheme hemisu
+set background=light
 
-set guifont=DejaVu\ Sans\ Mono:h16
+set guifont=Hack:h12
 
 set tabstop=4
 set shiftwidth=4
@@ -213,7 +215,7 @@ set undofile
 "
 " Auto-closing braces
 "
-let g:lexima_enable_basic_rules=0
+" let g:lexima_enable_basic_rules=0
 
 "
 " Enable Mouse Controls
