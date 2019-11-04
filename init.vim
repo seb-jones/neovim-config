@@ -39,7 +39,8 @@ call plug#end()
 
 " colors gruvbox
 " set background=dark
-colorscheme hemisu
+" colorscheme hemisu
+colorscheme mayansmoke
 set background=light
 
 set guifont=Hack:h12
@@ -221,3 +222,6 @@ set undofile
 " Enable Mouse Controls
 "
 set mouse=a
+
+set ignorecase
+set smartcase
