@@ -40,8 +40,9 @@ call plug#end()
 " colors gruvbox
 " set background=dark
 " colorscheme hemisu
-colorscheme mayansmoke
-set background=light
+
+colorscheme gruvbox
+set background=dark
 
 set guifont=Hack:h12
 
