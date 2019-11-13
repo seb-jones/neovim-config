@@ -44,8 +44,6 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
-set guifont=Hack:h12
-
 set tabstop=4
 set shiftwidth=4
 set expandtab
