@@ -121,6 +121,7 @@ let g:deoplete#enable_at_startup = 1
 
 let g:deoplete#sources = {}
 let g:deoplete#sources.php = ['omni', 'phpactor', 'ultisnips', 'buffer']
+let g:deoplete#sources.c = ['omni', 'tag', 'ultisnips', 'buffer']
 
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
