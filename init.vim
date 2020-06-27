@@ -24,6 +24,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-tag'
+
 Plug 'phpactor/phpactor' , { 'do': 'composer install', 'for': 'php' }
 Plug 'kristijanhusak/deoplete-phpactor'
 
@@ -117,11 +119,13 @@ command Bufonly :%bd|e#
 "
 let g:deoplete#enable_at_startup = 1
 
-let g:deoplete#sources = {}
-let g:deoplete#sources.php = ['omni', 'phpactor', 'ultisnips', 'buffer']
-let g:deoplete#sources.c = ['omni', 'tag', 'ultisnips', 'buffer']
+call deoplete#custom#source('buffer', 'filetypes', ['php', 'c', 'cpp', ])
+call deoplete#custom#source('file', 'filetypes', ['php', 'c', 'cpp'])
+call deoplete#custom#source('ultisnips', 'filetypes', ['php', 'c', 'cpp'])
 
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+call deoplete#custom#source('phpactor', 'filetypes', ['php'])
+
+call deoplete#custom#source('tag', 'filetypes', ['c', 'cpp'])
 
 "
 " Phpactor
@@ -189,7 +193,6 @@ nnoremap <C-n> :Tagbar<CR>
 "
 let g:ale_linters = {
            \   'javascript': ['eslint'],
-           \   'go': ['golint'],
            \   'c': [],
            \}
 
@@ -197,7 +200,6 @@ let g:ale_fixers = {
             \   'php': ['phpcbf'],
             \   'javascript': ['eslint'],
             \   'vue': ['eslint'],
-            \   'go': ['goimports']
             \}
 
 " let g:ale_fix_on_save = 1
