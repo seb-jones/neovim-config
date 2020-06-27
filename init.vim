@@ -192,6 +192,7 @@ nnoremap <C-n> :Tagbar<CR>
 " Configure linters
 "
 let g:ale_linters = {
+           \   'php': ['phpcs'],
            \   'javascript': ['eslint'],
            \   'c': [],
            \}
@@ -203,8 +204,11 @@ let g:ale_fixers = {
             \   'c': ['clang-format'],
             \}
 
+let g:ale_c_cppcheck_options='--enable=all'
+let g:ale_php_phpcs_options='--standard=PSR2'
+let g:ale_php_phpcbf_standard='PSR2'
+
 let g:ale_fix_on_save = 1
-let g:ale_fix_on_save_ignore = ['javascript', 'vue']
 
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
