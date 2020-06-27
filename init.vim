@@ -181,7 +181,12 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 "
 set clipboard+=unnamedplus
 
+"
+" Map and Configure Tagbar
+"
 nnoremap <C-n> :Tagbar<CR>
+
+let g:tagbar_autoclose=1
 
 "
 " Set terminal escape key to 'Control + /'
