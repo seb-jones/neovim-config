@@ -200,9 +200,11 @@ let g:ale_fixers = {
             \   'php': ['phpcbf'],
             \   'javascript': ['eslint'],
             \   'vue': ['eslint'],
+            \   'c': ['clang-format'],
             \}
 
-" let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 1
+let g:ale_fix_on_save_ignore = ['javascript', 'vue']
 
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
