@@ -187,6 +187,7 @@ set clipboard+=unnamedplus
 nnoremap <C-n> :Tagbar<CR>
 
 let g:tagbar_autoclose=1
+let g:tagbar_compact=1
 
 "
 " Set terminal escape key to 'Control + /'
