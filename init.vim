@@ -5,6 +5,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
 Plug 'Shougo/context_filetype.vim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
