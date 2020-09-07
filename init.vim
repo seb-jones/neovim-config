@@ -17,6 +17,7 @@ Plug 'tpope/vim-commentary'
 Plug 'flazz/vim-colorschemes'
 Plug 'jwalton512/vim-blade'
 Plug 'posva/vim-vue'
+Plug 'niftylettuce/vim-jinja'
 
 Plug 'jremmen/vim-ripgrep'
 
