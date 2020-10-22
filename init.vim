@@ -13,6 +13,7 @@ Plug 'kana/vim-textobj-entire'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'suy/vim-context-commentstring'
 
 Plug 'flazz/vim-colorschemes'
 Plug 'jwalton512/vim-blade'
@@ -216,6 +217,12 @@ let g:ale_php_phpcs_options='--standard=PSR2'
 let g:ale_php_phpcbf_standard='PSR2'
 
 let g:ale_fix_on_save = 1
+
+" If I don't do this, phpcbf fails on any file in the exclude-pattern :/
+let g:ale_php_phpcbf_executable = $HOME.'/.support/phpcbf-helper.sh'
+" in order to get the alternate executable working you have to declare it as
+" use global, even though it's not 'global' :/
+let g:ale_php_phpcbf_use_global = 1
 
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
