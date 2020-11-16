@@ -37,6 +37,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'cohama/lexima.vim'
 Plug 'majutsushi/tagbar'
 
+Plug 'pechorin/any-jump.vim'
+Plug 'RRethy/vim-illuminate'
+
 Plug 'w0rp/ale'
 
 call plug#end()
@@ -215,6 +218,8 @@ let g:ale_fixers = {
 let g:ale_c_cppcheck_options='--enable=all'
 let g:ale_php_phpcs_options='--standard=PSR2'
 let g:ale_php_phpcbf_standard='PSR2'
+
+let g:ale_c_clangformat_options='-style=file'
 
 let g:ale_fix_on_save = 1
 
