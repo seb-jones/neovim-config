@@ -40,6 +40,8 @@ Plug 'majutsushi/tagbar'
 Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
 
+Plug 'rhysd/clever-f.vim'
+
 Plug 'w0rp/ale'
 
 call plug#end()
@@ -258,3 +260,12 @@ set smartcase
 "
 let g:netrw_liststyle=3
 let g:netrw_banner=0
+
+"
+" Clever F config
+"
+let g:clever_f_across_no_line=1
+let g:clever_f_smart_case=1
+let g:clever_f_mark_direct=1
+map ; <Plug>(clever-f-repeat-forward)
+map , <Plug>(clever-f-repeat-back)
