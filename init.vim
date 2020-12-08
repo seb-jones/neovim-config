@@ -265,7 +265,6 @@ let g:netrw_banner=0
 " Clever F config
 "
 let g:clever_f_across_no_line=1
-let g:clever_f_smart_case=1
 let g:clever_f_mark_direct=1
 map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
