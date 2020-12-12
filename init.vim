@@ -40,9 +40,12 @@ Plug 'majutsushi/tagbar'
 Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
 
-Plug 'rhysd/clever-f.vim'
+Plug 'unblevable/quick-scope'
 
 Plug 'w0rp/ale'
+
+Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
 
@@ -262,9 +265,6 @@ let g:netrw_liststyle=3
 let g:netrw_banner=0
 
 "
-" Clever F config
+" IndentLine Config
 "
-let g:clever_f_across_no_line=1
-let g:clever_f_mark_direct=1
-map ; <Plug>(clever-f-repeat-forward)
-map , <Plug>(clever-f-repeat-back)
+let g:indentLine_char = '|'
