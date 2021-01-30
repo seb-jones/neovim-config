@@ -29,7 +29,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-tag'
 
 Plug 'phpactor/phpactor' , { 'do': 'composer install', 'for': 'php' }
-Plug 'kristijanhusak/deoplete-phpactor'
+" Plug 'kristijanhusak/deoplete-phpactor'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -46,6 +46,8 @@ Plug 'w0rp/ale'
 
 Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
+
+Plug 'elzr/vim-json'
 
 call plug#end()
 
@@ -127,13 +129,13 @@ command Bufonly :%bd|e#
 "
 " Deoplete
 "
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 call deoplete#custom#source('buffer', 'filetypes', ['php', 'c', 'cpp', ])
 call deoplete#custom#source('file', 'filetypes', ['php', 'c', 'cpp'])
 call deoplete#custom#source('ultisnips', 'filetypes', ['php', 'c', 'cpp'])
 
-call deoplete#custom#source('phpactor', 'filetypes', ['php'])
+" call deoplete#custom#source('phpactor', 'filetypes', ['php'])
 
 call deoplete#custom#source('tag', 'filetypes', ['c', 'cpp'])
 
@@ -177,6 +179,7 @@ vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 " FZF
 "
 nnoremap <C-p> :FZF<CR>
+let g:fzf_layout = { 'down': '40%' }
 
 "
 " Fix syntax highlighting on vue files
@@ -222,17 +225,18 @@ let g:ale_fixers = {
 
 let g:ale_c_cppcheck_options='--enable=all'
 let g:ale_php_phpcs_options='--standard=PSR2'
-let g:ale_php_phpcbf_standard='PSR2'
+let g:ale_php_phpcbf_options='--standard=PSR2'
+let g:ale_php_phpcbf_use_global = 1
 
 let g:ale_c_clangformat_options='-style=file'
 
 let g:ale_fix_on_save = 1
 
 " If I don't do this, phpcbf fails on any file in the exclude-pattern :/
-let g:ale_php_phpcbf_executable = $HOME.'/.support/phpcbf-helper.sh'
+" let g:ale_php_phpcbf_executable = $HOME.'/.support/phpcbf-helper.sh'
 " in order to get the alternate executable working you have to declare it as
 " use global, even though it's not 'global' :/
-let g:ale_php_phpcbf_use_global = 1
+"let g:ale_php_phpcbf_use_global = 1
 
 nmap <silent> [W <Plug>(ale_first)
 nmap <silent> [w <Plug>(ale_previous)
@@ -268,3 +272,8 @@ let g:netrw_banner=0
 " IndentLine Config
 "
 let g:indentLine_char = '|'
+
+"
+" Prevent Hiding of Double-Quote characters in JSON files
+"
+let g:vim_json_syntax_conceal = 0
