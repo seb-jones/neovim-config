@@ -29,7 +29,13 @@ Plug 'RRethy/vim-illuminate'
 Plug 'unblevable/quick-scope'
 Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+Plug 'camilledejoye/phpactor-mappings'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile && yarn run build'}
 
 call plug#end()
 
@@ -166,5 +172,6 @@ let g:indentLine_char = '|'
 let g:vim_json_syntax_conceal = 0
 
 "
-" COC
+" PHPactor Mappings
 "
+let g:phpactorActivateOverlapingMappings = v:true
