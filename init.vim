@@ -41,6 +41,8 @@ Plug 'phpactor/coc-phpactor', {'do': 'yarn install --frozen-lockfile && yarn run
 
 call plug#end()
 
+set termguicolors
+let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
 set tabstop=4
