@@ -13,10 +13,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
 Plug 'morhetz/gruvbox'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'jwalton512/vim-blade'
 Plug 'posva/vim-vue'
 Plug 'niftylettuce/vim-jinja'
 Plug 'elzr/vim-json'
+Plug 'nelsyeung/twig.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -42,14 +44,18 @@ Plug 'phpactor/coc-phpactor', {'do': 'yarn install --frozen-lockfile && yarn run
 call plug#end()
 
 set termguicolors
-let g:gruvbox_italic=1
-colorscheme gruvbox
+set title
+colorscheme onehalfdark
 set background=dark
+highlight Normal     ctermbg=NONE guibg=NONE
+highlight LineNr     ctermbg=NONE guibg=NONE
+highlight SignColumn ctermbg=NONE guibg=NONE
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
 set encoding=utf-8
+set relativenumber
 
 " Window Keymaps
 nnoremap <C-h> <C-w>h
