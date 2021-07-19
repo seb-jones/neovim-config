@@ -29,7 +29,6 @@ Plug 'majutsushi/tagbar'
 Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'unblevable/quick-scope'
-Plug 'Yggdroot/indentLine'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 Plug 'camilledejoye/phpactor-mappings'
