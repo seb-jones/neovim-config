@@ -25,15 +25,10 @@ Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'unblevable/quick-scope'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
-Plug 'camilledejoye/phpactor-mappings'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-Plug 'iamcco/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile && yarn run build'}
-Plug 'phpactor/coc-phpactor', {'do': 'yarn install --frozen-lockfile && yarn run build'}
+
+if !empty(glob("$HOME/.local_init.vim"))
+    source $HOME/.local_init.vim
+endif
 
 call plug#end()
 
@@ -120,13 +115,6 @@ let g:fzf_layout = { 'down': '40%' }
 command!      -bang -nargs=* Rgf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 "
-" Fix syntax highlighting on vue files
-"
-autocmd FileType vue syntax sync fromstart
-noremap <F12> <Esc>:syntax sync fromstart<CR>
-inoremap <F12> <C-o>:syntax sync fromstart<CR>
-
-"
 " Use '+' register (and thus the system clipboard) for all unnamed 
 " clipboard-based operations
 "
@@ -174,12 +162,3 @@ let g:indentLine_char = '|'
 " Prevent Hiding of Double-Quote characters in JSON files
 "
 let g:vim_json_syntax_conceal = 0
-
-"
-" PHPactor
-"
-let g:phpactorActivateOverlapingMappings = v:true
-
-" Prevent COC PHPactor from doubling up dollar signs at the start of variables
-autocmd FileType php set iskeyword+=$
-
