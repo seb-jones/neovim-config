@@ -28,6 +28,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tommcdo/vim-exchange'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'AndrewRadev/sideways.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
