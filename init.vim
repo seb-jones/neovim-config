@@ -25,6 +25,9 @@ Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'unblevable/quick-scope'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'tommcdo/vim-exchange'
+Plug 'dbeniamine/cheat.sh-vim'
+Plug 'AndrewRadev/sideways.vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
@@ -51,19 +54,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" tnoremap <C-h> <C-\><C-N><C-w>h
-" tnoremap <C-j> <C-\><C-N><C-w>j
-" tnoremap <C-k> <C-\><C-N><C-w>k
-" tnoremap <C-l> <C-\><C-N><C-w>l
-
-nnoremap <C-Up> :resize +5<CR>
-nnoremap <C-Down> :resize -5<CR>
-nnoremap <C-Left> :vertical resize -5<CR>
-nnoremap <C-Right> :vertical resize +5<CR>
-" tnoremap <C-Up> :resize +5<CR>
-" tnoremap <C-Down> :resize -5<CR>
-" tnoremap <C-Left> :vertical resize -5<CR>
-" tnoremap <C-Right> :vertical resize +5<CR>
 
 nnoremap <C-s> :vsp<CR>
 nnoremap <C-_> :sp<CR>
@@ -105,6 +95,13 @@ autocmd WinEnter * setlocal cul
 
 " :bufonly closes all but the current buffer
 command Bufonly :%bd|e#
+
+"
+" Sideways
+"
+
+nnoremap <C-Left> :SidewaysLeft<CR>
+nnoremap <C-Right> :SidewaysRight<CR>
 
 "
 " FZF
