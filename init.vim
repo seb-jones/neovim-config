@@ -19,7 +19,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'cohama/lexima.vim'
 Plug 'majutsushi/tagbar'
 Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
@@ -29,6 +28,9 @@ Plug 'tommcdo/vim-exchange'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'vifm/vifm.vim'
+Plug 'tpope/vim-endwise'
+Plug 'rstacruz/vim-closer'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
@@ -131,11 +133,6 @@ let g:tagbar_compact=1
 "
 
 set undofile
-
-"
-" Auto-closing braces
-"
-" let g:lexima_enable_basic_rules=0
 
 "
 " Enable Mouse Controls
