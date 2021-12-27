@@ -30,7 +30,7 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'vifm/vifm.vim'
 Plug 'tpope/vim-endwise'
-Plug 'rstacruz/vim-closer'
+Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/git-messenger.vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
