@@ -158,3 +158,8 @@ let g:indentLine_char = '|'
 " Prevent Hiding of Double-Quote characters in JSON files
 "
 let g:vim_json_syntax_conceal = 0
+
+"
+" Custom comment strings
+"
+autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
