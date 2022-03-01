@@ -110,7 +110,7 @@ nnoremap <C-Right> :SidewaysRight<CR>
 "
 " FZF
 "
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :GFiles<CR>
 let g:fzf_layout = { 'down': '40%' }
 
 command!      -bang -nargs=* Rgf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
