@@ -32,6 +32,7 @@ Plug 'vifm/vifm.vim'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/git-messenger.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
