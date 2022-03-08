@@ -111,8 +111,11 @@ nnoremap <C-Right> :SidewaysRight<CR>
 "
 " FZF
 "
-nnoremap <C-p> :GFiles<CR>
+
+let $FZF_DEFAULT_COMMAND='fd --hidden --no-ignore-vcs --exclude vendor --exclude node_modules'
 let g:fzf_layout = { 'down': '40%' }
+
+nnoremap <C-p> :Files<CR>
 
 command!      -bang -nargs=* Rgf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
