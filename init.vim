@@ -112,7 +112,7 @@ nnoremap <C-Right> :SidewaysRight<CR>
 " FZF
 "
 
-let $FZF_DEFAULT_COMMAND='fd --hidden --no-ignore-vcs --exclude vendor --exclude node_modules'
+let $FZF_DEFAULT_COMMAND='fd --type f --hidden --no-ignore-vcs --exclude vendor --exclude node_modules'
 let g:fzf_layout = { 'down': '40%' }
 
 nnoremap <C-p> :Files<CR>
