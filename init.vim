@@ -33,6 +33,7 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/git-messenger.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'github/copilot.vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
