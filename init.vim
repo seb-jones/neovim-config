@@ -63,6 +63,8 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-s> :vsp<CR>
 nnoremap <C-_> :sp<CR>
 
+nnoremap X :q<CR>
+
 " Buffer Keymaps
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>
