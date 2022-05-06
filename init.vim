@@ -175,3 +175,5 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 " Initialize Hop plugin
 "
 lua require'hop'.setup()
+
+nnoremap <c-space> :HopWord<CR>
