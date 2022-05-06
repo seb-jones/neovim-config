@@ -33,6 +33,7 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/git-messenger.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'phaazon/hop.nvim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
@@ -169,3 +170,8 @@ let g:vim_json_syntax_conceal = 0
 " Custom comment strings
 "
 autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
+
+"
+" Initialize Hop plugin
+"
+lua require'hop'.setup()
