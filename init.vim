@@ -91,9 +91,6 @@ set belloff=all
 set hlsearch
 set incsearch
 
-" Map double-space to clear highlighting
-map <silent> <Space> :noh<CR>
-
 " Highlight current line when not in insert mode
 set cul
 autocmd InsertEnter * set nocul
@@ -176,4 +173,5 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 "
 lua require'hop'.setup()
 
-nnoremap <c-space> :HopWord<CR>
+nnoremap <space> :HopWord<CR>
+nnoremap <c-space> :HopLine<CR>
