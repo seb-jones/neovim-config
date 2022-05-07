@@ -173,5 +173,5 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 "
 lua require'hop'.setup()
 
-nnoremap <space> :HopWord<CR>
-nnoremap <c-space> :HopLine<CR>
+noremap <space> <cmd>HopWord<CR>
+noremap <c-space> <cmd>HopLine<CR>
