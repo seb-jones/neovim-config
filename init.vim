@@ -30,8 +30,8 @@ Plug 'AndrewRadev/sideways.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'vifm/vifm.vim'
 Plug 'tpope/vim-endwise'
-Plug 'jiangmiao/auto-pairs'
 Plug 'rhysd/git-messenger.vim'
+Plug 'windwp/nvim-autopairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'phaazon/hop.nvim'
 
@@ -169,9 +169,14 @@ let g:vim_json_syntax_conceal = 0
 autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 
 "
-" Initialize Hop plugin
+" Hop plugin
 "
 lua require'hop'.setup()
 
 noremap <space> <cmd>HopWord<CR>
 noremap <c-space> <cmd>HopLine<CR>
+
+"
+" Autopairs plugin
+"
+lua require'nvim-autopairs'.setup()
