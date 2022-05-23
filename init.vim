@@ -34,6 +34,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'phaazon/hop.nvim'
+Plug 'brooth/far.vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
