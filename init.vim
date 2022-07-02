@@ -58,10 +58,10 @@ call plug#end()
 set termguicolors
 set title
 colorscheme onehalfdark
+set background=dark
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
-set background=dark
 set tabstop=4
 set shiftwidth=4
 set expandtab
