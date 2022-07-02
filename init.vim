@@ -35,6 +35,19 @@ Plug 'windwp/nvim-autopairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'phaazon/hop.nvim'
 Plug 'brooth/far.vim'
+Plug 'mattn/emmet-vim'
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+Plug 'camilledejoye/phpactor-mappings'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'iamcco/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile && yarn run build'}
+Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile && yarn run build'}
+Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
+Plug 'github/copilot.vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
@@ -45,10 +58,10 @@ call plug#end()
 set termguicolors
 set title
 colorscheme onehalfdark
-set background=dark
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
+set background=dark
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -181,3 +194,8 @@ noremap <c-space> <cmd>HopLine<CR>
 " Autopairs plugin
 "
 lua require'nvim-autopairs'.setup()
+
+"
+" PHPactor
+"
+let g:phpactorActivateOverlapingMappings = v:true
