@@ -162,6 +162,12 @@ set ignorecase
 set smartcase
 
 "
+" Clear highlighting
+"
+
+noremap <CR><CR> <cmd>noh<CR>
+
+"
 " Netrw config
 "
 let g:netrw_liststyle=3
