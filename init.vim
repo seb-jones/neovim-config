@@ -191,10 +191,10 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 "
 " Hop plugin
 "
-lua require'hop'.setup()
+lua require'hop'.setup { uppercase_labels = true, multi_windows = true, teasing = false, }
 
-noremap <space> <cmd>HopWord<CR>
-noremap <c-space> <cmd>HopLine<CR>
+noremap <space> <cmd>lua require'hop'.hint_patterns({}, '\\S\\+')<CR>
+noremap <c-space> <cmd>HopLineStart<CR>
 
 "
 " Autopairs plugin
