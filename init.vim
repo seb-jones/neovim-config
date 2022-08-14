@@ -193,7 +193,7 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 "
 lua require'hop'.setup { uppercase_labels = true, multi_windows = true, teasing = false, }
 
-noremap <space> <cmd>lua require'hop'.hint_patterns({}, '\\S\\+')<CR>
+noremap <space> <cmd>lua require'hop'.hint_patterns({}, [=[\w\+\\|[[:punct:]]\+]=])<CR>
 noremap <c-space> <cmd>HopLineStart<CR>
 
 "
