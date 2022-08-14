@@ -27,7 +27,6 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tommcdo/vim-exchange'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'AndrewRadev/sideways.vim'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'vifm/vifm.vim'
 Plug 'tpope/vim-endwise'
 Plug 'rhysd/git-messenger.vim'
@@ -67,7 +66,7 @@ set shiftwidth=4
 set expandtab
 set number
 set encoding=utf-8
-set relativenumber
+set norelativenumber
 
 " Window Keymaps
 nnoremap <C-h> <C-w>h
