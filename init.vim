@@ -75,7 +75,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 nnoremap <C-s> :vsp<CR>
-nnoremap <C-_> :sp<CR>
+nnoremap <C-S-s> :sp<CR>
 
 nnoremap X :q<CR>
 
