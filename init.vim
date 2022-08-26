@@ -47,6 +47,7 @@ Plug 'iamcco/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile && yarn ru
 Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile && yarn run build'}
 Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
 Plug 'github/copilot.vim'
+Plug 'junegunn/goyo.vim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
