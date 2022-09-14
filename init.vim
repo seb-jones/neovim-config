@@ -162,10 +162,16 @@ set ignorecase
 set smartcase
 
 "
-" Clear highlighting
+" Clear highlighting on Return
 "
 
 noremap <CR><CR> <cmd>noh<CR>
+
+"
+" Go back to previous file on Backspace
+"
+
+nnoremap <BS> <C-^>
 
 "
 " Netrw config
