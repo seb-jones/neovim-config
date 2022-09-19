@@ -219,3 +219,8 @@ let g:phpactorActivateOverlapingMappings = v:true
 " Diff View Command
 "
 command Gd :DiffviewOpen
+
+"
+" Git Blame command
+"
+command Gb :Git blame
