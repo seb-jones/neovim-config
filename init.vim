@@ -48,6 +48,8 @@ Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile && yarn run b
 Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
 Plug 'github/copilot.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
 
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
@@ -211,3 +213,9 @@ lua require'nvim-autopairs'.setup()
 " PHPactor
 "
 let g:phpactorActivateOverlapingMappings = v:true
+
+
+"
+" Diff View Command
+"
+command Gd :DiffviewOpen
