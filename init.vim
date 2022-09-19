@@ -201,7 +201,7 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 "
 lua require'hop'.setup { uppercase_labels = true, multi_windows = false, teasing = false, }
 
-noremap <space> <cmd>lua require'hop'.hint_patterns({}, [=[\w\+\\|[[:punct:]]\+]=])<CR>
+noremap <space> <cmd>lua require'hop'.hint_patterns({}, [=[\w\+[[:punct:]]*\\|[[:punct:]]\+\w*]=])<CR>
 
 "
 " Autopairs plugin
