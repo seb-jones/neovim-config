@@ -219,6 +219,8 @@ let g:phpactorActivateOverlapingMappings = v:true
 "
 command Gd :DiffviewOpen
 
+lua require'diffview'.setup({ use_icons = false })
+
 "
 " Git Blame command
 "
