@@ -197,29 +197,10 @@ let g:vim_json_syntax_conceal = 0
 autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 
 "
-" Hop plugin
-"
-lua require'hop'.setup { uppercase_labels = true, multi_windows = false, teasing = false, }
-
-noremap <space> <cmd>lua require'hop'.hint_patterns({}, [=[\w\+[[:punct:]]*\\|[[:punct:]]\+\w*]=])<CR>
-
-"
-" Autopairs plugin
-"
-lua require'nvim-autopairs'.setup()
-
-"
 " PHPactor
 "
 let g:phpactorActivateOverlapingMappings = v:true
 
-
-"
-" Diff View Command
-"
-command Gd :DiffviewOpen
-
-lua require'diffview'.setup({ use_icons = false })
 
 "
 " Git Blame command
@@ -254,3 +235,6 @@ nmap <silent> gr <Plug>(coc-references)
 set splitright
 command! -nargs=* Vterm :vsplit | term <args>
 nnoremap R :Vterm<UP><CR>
+
+" Load any config for neovim-specific Lua plugins from lua/nvim-specific-config.lua
+lua require("nvim-specific-config")
