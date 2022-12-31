@@ -182,11 +182,6 @@ let g:netrw_liststyle=3
 let g:netrw_banner=0
 
 "
-" IndentLine Config
-"
-let g:indentLine_char = '|'
-
-"
 " Prevent Hiding of Double-Quote characters in JSON files
 "
 let g:vim_json_syntax_conceal = 0

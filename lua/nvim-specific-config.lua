@@ -1,4 +1,4 @@
--- Hop plugin
+-- Hop
 
 hop = require "hop"
 
@@ -14,11 +14,11 @@ vim.keymap.set(
     function() hop.hint_patterns({}, [=[\w\+[[:punct:]]*\|[[:punct:]]\+\w*]=]) end
 )
 
--- Autopairs plugin
+-- Autopairs
 
 require "nvim-autopairs".setup()
 
--- Diff View Command
+-- Diff View
 
 require "diffview".setup({ use_icons = false })
 
@@ -29,9 +29,8 @@ vim.api.nvim_create_user_command(
 )
 
 -- Treesitter
-require'nvim-treesitter.configs'.setup {
 
-    -- A list of parser names, or "all"
+require'nvim-treesitter.configs'.setup {
     ensure_installed = {
         "bash",
         "css",
@@ -59,4 +58,10 @@ require'nvim-treesitter.configs'.setup {
     highlight = { enable = true },
 
     indent = { enable = true },
+}
+
+-- Indent Blankline
+require "indent_blankline".setup {
+    show_current_context = true,
+    show_current_context_start = true,
 }
