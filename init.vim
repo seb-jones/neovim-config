@@ -1,5 +1,6 @@
 "
-" Plugins
+" Plugin Installation
+" ==============================================================================
 "
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -44,16 +45,11 @@ Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 
-if !empty(glob("$HOME/.local_init.vim"))
-    source $HOME/.local_init.vim
-endif
-
 call plug#end()
-
-
 
 "
 " General Settings
+" ==============================================================================
 "
 
 set termguicolors
@@ -81,10 +77,9 @@ set clipboard+=unnamedplus " Use system clipboard for general copy/paste
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 
-
-
 "
 " Keymaps
+" ==============================================================================
 "
 
 " Windows
@@ -129,10 +124,14 @@ noremap <CR><CR> <cmd>noh<CR>
 "
 nnoremap <BS> <C-^>
 
-
+" Use R to run the latest Vterm command
+set splitright
+command! -nargs=* Vterm :vsplit | term <args>
+nnoremap R :Vterm<UP><CR>
 
 "
-" Plugins
+" Plugin Settings
+" ==============================================================================
 "
 
 " Sideways
@@ -182,15 +181,19 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Use R to run the latest Vterm command
-set splitright
-command! -nargs=* Vterm :vsplit | term <args>
-nnoremap R :Vterm<UP><CR>
-
-
-
 "
 " Load any config for neovim-specific Lua plugins from lua/nvim-specific-config.lua
+" ==============================================================================
 "
 
 lua require("nvim-specific-config")
+
+"
+" Source ~/.local_init.vim if it exists, to allow for machine-specific config
+" ==============================================================================
+"
+
+if !empty(glob("$HOME/.local_init.vim"))
+    source $HOME/.local_init.vim
+endif
+
