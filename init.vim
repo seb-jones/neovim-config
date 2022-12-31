@@ -50,6 +50,8 @@ endif
 
 call plug#end()
 
+
+
 "
 " General Settings
 "
@@ -78,6 +80,8 @@ set smartcase
 set clipboard+=unnamedplus " Use system clipboard for general copy/paste
 let g:netrw_liststyle=3
 let g:netrw_banner=0
+
+
 
 "
 " Keymaps
@@ -125,58 +129,39 @@ noremap <CR><CR> <cmd>noh<CR>
 "
 nnoremap <BS> <C-^>
 
+
+
 "
-" Sideways Plugin
+" Plugins
 "
 
+" Sideways
 nnoremap <C-Left> :SidewaysLeft<CR>
 nnoremap <C-Right> :SidewaysRight<CR>
 
-"
 " FZF
-"
-
 let $FZF_DEFAULT_COMMAND='fd --type file --type symlink --hidden --no-ignore-vcs --exclude vendor --exclude node_modules --exclude .git'
 let g:fzf_layout = { 'down': '40%' }
-
 nnoremap <C-P> :Files<CR>
 nnoremap <C-S-P> :Buffers<CR>
-
 command!      -bang -nargs=* Rgf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
-"
-" Map and Configure Tagbar
-"
+" Tagbar
 nnoremap <C-n> :Tagbar<CR>
-
 let g:tagbar_autoclose=1
 let g:tagbar_compact=1
 
-"
-" Prevent Hiding of Double-Quote characters in JSON files
-"
-let g:vim_json_syntax_conceal = 0
-
-"
-" Custom comment strings
-"
+" Custom Twig comment string
 autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 
-"
 " PHPactor
-"
 let g:phpactorActivateOverlapingMappings = v:true
 
-
-"
-" Git Blame command
-"
+" Git Blame
 command Gb :Git blame
 
-"
 " COC
 " Adapted from https://github.com/neoclide/coc.nvim#example-vim-configuration
-"
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -202,5 +187,10 @@ set splitright
 command! -nargs=* Vterm :vsplit | term <args>
 nnoremap R :Vterm<UP><CR>
 
+
+
+"
 " Load any config for neovim-specific Lua plugins from lua/nvim-specific-config.lua
+"
+
 lua require("nvim-specific-config")
