@@ -31,32 +31,32 @@ vim.api.nvim_create_user_command(
 -- Treesitter
 require'nvim-treesitter.configs'.setup {
 
-  -- A list of parser names, or "all"
-  ensure_installed = {
-      "bash",
-      "css",
-      "diff",
-      "dockerfile",
-      "gitcommit",
-      "gitignore",
-      "glsl",
-      "graphql",
-      "html",
-      "javascript",
-      "jq",
-      "json",
-      "lua",
-      "php",
-      "sql",
-      "twig",
-      "vim",
-      "vue",
-      "yaml",
-  },
+    -- A list of parser names, or "all"
+    ensure_installed = {
+        "bash",
+        "css",
+        "diff",
+        "dockerfile",
+        "gitcommit",
+        "gitignore",
+        "glsl",
+        "graphql",
+        "html",
+        "javascript",
+        "jq",
+        "json",
+        "lua",
+        "php",
+        "sql",
+        "twig",
+        "vim",
+        "vue",
+        "yaml",
+    },
 
-  auto_install = false,
+    auto_install = false,
 
-  highlight = { enable = true },
+    highlight = { enable = true },
 
-  indent = { enable = true },
+    indent = { enable = true },
 }
