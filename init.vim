@@ -22,19 +22,13 @@ Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'pechorin/any-jump.vim'
 Plug 'RRethy/vim-illuminate'
-Plug 'unblevable/quick-scope'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'tommcdo/vim-exchange'
-Plug 'dbeniamine/cheat.sh-vim'
 Plug 'AndrewRadev/sideways.vim'
 Plug 'vifm/vifm.vim'
-Plug 'tpope/vim-endwise'
-Plug 'rhysd/git-messenger.vim'
 Plug 'windwp/nvim-autopairs'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'phaazon/hop.nvim'
 Plug 'brooth/far.vim'
-Plug 'mattn/emmet-vim'
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
 Plug 'camilledejoye/phpactor-mappings'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -47,7 +41,6 @@ Plug 'iamcco/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile && yarn ru
 Plug 'marlonfan/coc-phpls', {'do': 'yarn install --frozen-lockfile && yarn run build'}
 Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
 Plug 'github/copilot.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 
