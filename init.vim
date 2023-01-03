@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'jwalton512/vim-blade'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
