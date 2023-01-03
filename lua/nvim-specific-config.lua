@@ -30,7 +30,7 @@ vim.api.nvim_create_user_command(
 
 -- Treesitter
 
-require'nvim-treesitter.configs'.setup {
+require "nvim-treesitter.configs".setup {
     ensure_installed = {
         "bash",
         "css",
