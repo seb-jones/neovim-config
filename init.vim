@@ -13,7 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+Plug 'owickstrom/vim-colors-paramount'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -54,7 +54,7 @@ call plug#end()
 
 set termguicolors
 set title
-colorscheme onehalfdark
+colorscheme paramount
 set background=dark
 highlight Normal ctermbg=NONE guibg=NONE
 highlight LineNr ctermbg=NONE guibg=NONE
