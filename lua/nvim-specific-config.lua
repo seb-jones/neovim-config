@@ -10,7 +10,7 @@ hop.setup {
 
 vim.keymap.set(
     "",
-    "<space>",
+    "<Space>",
     function() hop.hint_patterns({}, [=[\w\+[[:punct:]]*\|[[:punct:]]\+\w*]=]) end
 )
 
@@ -61,7 +61,12 @@ require "nvim-treesitter.configs".setup {
 }
 
 -- Indent Blankline
+
 require "indent_blankline".setup {
     show_current_context = true,
     show_current_context_start = true,
 }
+
+-- LuaSnip
+
+require "luasnip.loaders.from_lua".load({ paths = "~/.config/nvim/snippets" })
