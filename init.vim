@@ -160,6 +160,15 @@ let g:phpactorActivateOverlapingMappings = v:true
 " Git Blame
 command Gb :Git blame
 
+" Vim Blade
+
+let g:blade_custom_directives = [ 'plural', 'title' ]
+
+let g:blade_custom_directives_pairs = {
+      \   'admin': 'endadmin',
+      \   'broker': 'endbroker',
+      \ }
+
 " COC
 " Adapted from https://github.com/neoclide/coc.nvim#example-vim-configuration
 
