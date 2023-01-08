@@ -110,4 +110,32 @@ for _, tag in ipairs(singleTag) do
     snippets[#snippets + 1] = s(tag, fmt("<" .. tag .. " {}>", { i(1) }))
 end
 
+snippets[#snippets + 1] = s("html", fmt([[
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>{}</title>
+        </head>
+        <body>
+            {}
+        </body>
+    </html>
+]], { i(1), i(2) }))
+
+snippets[#snippets + 1] = s("tbl", fmt([[
+    <table>
+        <thead>
+            <tr>
+                {}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {}
+            </tr>
+        </tbody>
+    </table>
+]], { i(1), i(2) }))
+
 return snippets
