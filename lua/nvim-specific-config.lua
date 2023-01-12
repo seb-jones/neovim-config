@@ -69,4 +69,12 @@ require "indent_blankline".setup {
 
 -- LuaSnip
 
-require "luasnip.loaders.from_lua".load({ paths = "~/.config/nvim/snippets" })
+-- honza/vim-snippets stores global snippets in _.snippets, so this tells LuaSnip to
+-- look there for global snippets.
+require "luasnip".filetype_extend("all", { "_" })
+
+-- Lazy-load from honza/vim-snippets snippetsk
+require("luasnip.loaders.from_snipmate").lazy_load()
+
+-- Lazy-load our own lua snippets
+-- require "luasnip.loaders.from_lua".lazy_load({ paths = "~/.config/nvim/snippets" })
