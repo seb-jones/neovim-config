@@ -115,7 +115,7 @@ autocmd WinLeave * setlocal nocul
 autocmd WinEnter * setlocal cul
 
 " :bufonly closes all but the current buffer
-command Bufonly :%bd|e#
+command Bo :%bd|e#
 
 " Clear highlighting on Return
 noremap <CR><CR> <cmd>noh<CR>
