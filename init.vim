@@ -13,7 +13,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'suy/vim-context-commentstring'
-Plug 'owickstrom/vim-colors-paramount'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'jwalton512/vim-blade'
 Plug 'jremmen/vim-ripgrep'
@@ -55,7 +54,7 @@ call plug#end()
 
 set termguicolors
 set title
-colorscheme paramount
+colorscheme seb
 set background=dark
 highlight Normal ctermbg=NONE guibg=NONE
 highlight LineNr ctermbg=NONE guibg=NONE
