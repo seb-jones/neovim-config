@@ -138,21 +138,31 @@ nnoremap R :Vterm<UP><CR>
 nnoremap <C-Left> :SidewaysLeft<CR>
 nnoremap <C-Right> :SidewaysRight<CR>
 
-" FZF Files and Buffers in a single mapping
+" FZF Files and Buffers in a single list, mapped to Ctrl + P
 nnoremap <C-P> :FzfFilesAndBuffers<CR>
 
 command! FzfFilesAndBuffers call fzf#run({
-\ 'source':  reverse(s:all_files()),
+\ 'source':  reverse(s:files_and_buffers()),
 \ 'sink':    'edit',
 \ 'down':    '40%',
 \ })
 
-function! s:all_files()
+nnoremap <C-S-P> :FzfAllFilesAndBuffers<CR>
+
+command! FzfAllFilesAndBuffers call fzf#run({
+\ 'source':  reverse(s:files_and_buffers(1)),
+\ 'sink':    'edit',
+\ 'down':    '40%',
+\ })
+
+function! s:files_and_buffers(noExcludes = 0)
+  let s:additionalOptions = a:noExcludes ? '' : ' --exclude .git --exclude node_modules --exclude vendor'
+
   return extend(
     \ reverse(
       \ filter(
         \ split(
-          \ system('fd --type file --type symlink --hidden --no-ignore-vcs --exclude vendor --exclude node_modules --exclude .git'),
+          \ system('fd --type file --type symlink --hidden --no-ignore-vcs ' .. s:additionalOptions),
           \ "\n"
         \ ),
         \ '!empty(v:val)'
