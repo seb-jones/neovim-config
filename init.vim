@@ -138,11 +138,30 @@ nnoremap R :Vterm<UP><CR>
 nnoremap <C-Left> :SidewaysLeft<CR>
 nnoremap <C-Right> :SidewaysRight<CR>
 
-" FZF
-let $FZF_DEFAULT_COMMAND='fd --type file --type symlink --hidden --no-ignore-vcs --exclude vendor --exclude node_modules --exclude .git'
-let g:fzf_layout = { 'down': '40%' }
-nnoremap <C-P> :Files<CR>
-nnoremap <C-S-P> :Buffers<CR>
+" FZF Files and Buffers in a single mapping
+nnoremap <C-P> :FzfFilesAndBuffers<CR>
+
+command! FzfFilesAndBuffers call fzf#run({
+\ 'source':  reverse(s:all_files()),
+\ 'sink':    'edit',
+\ 'down':    '40%',
+\ })
+
+function! s:all_files()
+  return extend(
+    \ reverse(
+      \ filter(
+        \ split(
+          \ system('fd --type file --type symlink --hidden --no-ignore-vcs --exclude vendor --exclude node_modules --exclude .git'),
+          \ "\n"
+        \ ),
+        \ '!empty(v:val)'
+      \ ),
+    \ ),
+  \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
+endfunction
+
+" FZF Ripgrep command
 command!      -bang -nargs=* Rgf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
 
 " Tagbar
