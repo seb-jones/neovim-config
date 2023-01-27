@@ -18,7 +18,7 @@ Plug 'jwalton512/vim-blade'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'L3MON4D3/LuaSnip', { 'tag': 'v1.1.*' }
+Plug 'L3MON4D3/LuaSnip', { 'tag': 'v1.2.*' }
 Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'pechorin/any-jump.vim'
@@ -221,7 +221,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " LuaSnip
 
-imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
+imap <silent><expr> <c-space> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<c-space>' 
 
 "
 " Load any config for neovim-specific Lua plugins from lua/nvim-specific-config.lua
