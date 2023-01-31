@@ -221,7 +221,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " LuaSnip
 
-imap <silent><expr> <c-space> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<c-space>' 
+imap <silent><expr> <c-space> luasnip#expandable() ? '<Plug>luasnip-expand-snippet' : '' 
 
 "
 " Load any config for neovim-specific Lua plugins from lua/nvim-specific-config.lua
