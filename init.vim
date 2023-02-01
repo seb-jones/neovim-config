@@ -138,38 +138,21 @@ nnoremap R :Vterm<UP><CR>
 nnoremap <C-Left> :SidewaysLeft<CR>
 nnoremap <C-Right> :SidewaysRight<CR>
 
-" FZF Files and Buffers in a single list, mapped to Ctrl + P
-nnoremap <C-P> :FzfFilesAndBuffers<CR>
+" FZF Global Settings
+let $FZF_DEFAULT_COMMAND='fd --type file --type symlink --hidden --no-ignore-vcs --exclude vendor --exclude node_modules --exclude .git'
+let g:fzf_layout = { 'down': '40%' }
 
-command! FzfFilesAndBuffers call fzf#run({
-\ 'source':  reverse(s:files_and_buffers()),
-\ 'sink':    'edit',
-\ 'down':    '40%',
-\ })
+" FZF Files Command - includes most files other than vendor, node_modules, and
+" .git
+nnoremap <C-P> :Files<CR>
 
-nnoremap <C-S-P> :FzfAllFilesAndBuffers<CR>
+command! -bang -nargs=? -complete=dir AllFiles call fzf#vim#files(<q-args>, fzf#vim#with_preview({
+            \ 'source' : 'fd --type file --type symlink --hidden --no-ignore-vcs',
+            \ }), <bang>0)
 
-command! FzfAllFilesAndBuffers call fzf#run({
-\ 'source':  reverse(s:files_and_buffers(1)),
-\ 'sink':    'edit',
-\ 'down':    '40%',
-\ })
-
-function! s:files_and_buffers(noExcludes = 0)
-  let s:additionalOptions = a:noExcludes ? '' : ' --exclude .git --exclude node_modules --exclude vendor'
-
-  return extend(
-    \ reverse(
-      \ filter(
-        \ split(
-          \ system('fd --type file --type symlink --hidden --no-ignore-vcs ' .. s:additionalOptions),
-          \ "\n"
-        \ ),
-        \ '!empty(v:val)'
-      \ ),
-    \ ),
-  \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
-endfunction
+" FZF All Files Command - includes vendor, node_modules and .git in search, but is
+" slower than :Files
+nnoremap <C-S-P> :AllFiles<CR>
 
 " FZF Ripgrep command
 command!      -bang -nargs=* Rgf                        call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
