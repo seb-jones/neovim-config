@@ -44,6 +44,7 @@ Plug 'yaegassy/coc-blade', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -54,11 +55,10 @@ call plug#end()
 
 set termguicolors
 set title
-colorscheme seb
-set background=dark
-highlight Normal ctermbg=NONE guibg=NONE
-highlight LineNr ctermbg=NONE guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE
+colorscheme gruvbox
+set background=light
+let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark='hard'
 set tabstop=4
 set shiftwidth=4
 set expandtab
