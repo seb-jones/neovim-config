@@ -56,9 +56,9 @@ call plug#end()
 set termguicolors
 set title
 colorscheme gruvbox
-set background=light
+set background=dark
 let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='medium'
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -204,7 +204,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " LuaSnip
 
-imap <silent><expr> <c-space> luasnip#expandable() ? '<Plug>luasnip-expand-snippet' : '' 
+imap <silent><expr> <Tab> luasnip#expandable() ? '<Plug>luasnip-expand-snippet' : '<Tab>' 
 
 "
 " Load any config for neovim-specific Lua plugins from lua/nvim-specific-config.lua
