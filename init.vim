@@ -202,6 +202,11 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Tell Copilot where to look for node binary, since we don't always use an
+" compatible version when working on some older sites
+
+let g:copilot_node_command = "/usr/local/bin/node"
+
 " LuaSnip
 
 imap <silent><expr> <Tab> luasnip#expandable() ? '<Plug>luasnip-expand-snippet' : '<Tab>' 
@@ -221,4 +226,3 @@ lua require("nvim-specific-config")
 if !empty(glob("$HOME/.local_init.vim"))
     source $HOME/.local_init.vim
 endif
-
