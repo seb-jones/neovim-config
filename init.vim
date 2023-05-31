@@ -169,7 +169,10 @@ autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 let g:phpactorActivateOverlapingMappings = v:true
 let g:phpactorInputListStrategy = 'phpactor#input#list#fzf'
 nnoremap yU :PhpactorImportMissingClasses<CR>
-autocmd FileType php nnoremap <buffer> <leader>m :PhpactorContextMenu<CR>
+autocmd FileType php nnoremap <buffer> <leader>p :PhpactorContextMenu<CR>
+autocmd FileType php nnoremap <buffer> <leader>m :PhpactorMoveFile<CR>
+autocmd FileType php nnoremap <buffer> <leader>e :PhpactorExtractMethod<CR>
+autocmd FileType php nnoremap <buffer> <leader>n :PhpactorClassNew<CR>
 
 " Git Blame
 command Gb :Git blame
