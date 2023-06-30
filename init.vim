@@ -45,6 +45,7 @@ Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'mcchrish/zenbones.nvim'
+Plug 'f-person/auto-dark-mode.nvim'
 
 call plug#end()
 
