@@ -138,6 +138,9 @@ nnoremap <C-Right> :SidewaysRight<CR>
 
 " FZF Global Settings
 let $FZF_DEFAULT_COMMAND='fd --type file --type symlink --hidden --no-ignore-vcs --exclude vendor --exclude node_modules --exclude .git --exclude .next'
+
+let $FZF_PREVIEW_COMMAND="bat --color=never --line-range :50 {}"
+
 let g:fzf_layout = { 'down': '40%' }
 
 " FZF Files Command - includes most files other than vendor, node_modules, and
