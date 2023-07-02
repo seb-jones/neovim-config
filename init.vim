@@ -40,6 +40,7 @@ Plug 'neoclide/coc-json', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-snippets', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'iamcco/coc-tailwindcss', { 'do': 'yarn install --frozen-lockfile && yarn run build' }
+Plug 'iamcco/coc-spell-checker', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'marlonfan/coc-phpls', { 'do': 'yarn install --frozen-lockfile && yarn run build' }
 Plug 'yaegassy/coc-blade', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'github/copilot.vim'
