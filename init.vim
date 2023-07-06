@@ -211,6 +211,10 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" COC Spellcheck Maps
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
+
 " Tell Copilot where to look for node binary, since we don't always use an
 " compatible version when working on some older sites
 
