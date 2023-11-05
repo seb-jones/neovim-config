@@ -45,8 +45,8 @@ Plug 'yaegassy/coc-blade', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
-Plug 'mcchrish/zenbones.nvim'
-Plug 'f-person/auto-dark-mode.nvim'
+Plug 'arcticicestudio/nord-vim'
+" Plug 'f-person/auto-dark-mode.nvim'
 
 call plug#end()
 
@@ -57,8 +57,7 @@ call plug#end()
 
 set termguicolors
 set title
-let g:zenbones_compat=1
-colorscheme zenbones
+colorscheme nord
 set tabstop=4
 set shiftwidth=4
 set expandtab
