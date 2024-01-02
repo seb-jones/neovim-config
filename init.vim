@@ -168,6 +168,7 @@ let g:tagbar_compact=1
 autocmd FileType html.twig setlocal commentstring={#\ %s\ #}
 
 " PHPactor
+let g:phpactorPhpBin = '/usr/local/opt/php/bin/php'
 let g:phpactorActivateOverlapingMappings = v:true
 let g:phpactorInputListStrategy = 'phpactor#input#list#fzf'
 nnoremap yU :PhpactorImportMissingClasses<CR>
