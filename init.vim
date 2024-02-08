@@ -45,7 +45,11 @@ Plug 'yaegassy/coc-blade', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'jackMort/ChatGPT.nvim'
 Plug 'arcticicestudio/nord-vim'
+
 " Plug 'f-person/auto-dark-mode.nvim'
 
 call plug#end()
