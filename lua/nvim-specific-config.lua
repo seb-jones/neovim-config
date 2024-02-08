@@ -87,7 +87,13 @@ require "ibl".setup()
 require "luasnip".filetype_extend("all", { "_" })
 
 -- Lazy-load from honza/vim-snippets snippetsk
-require("luasnip.loaders.from_snipmate").lazy_load()
+require "luasnip.loaders.from_snipmate".lazy_load()
 
 -- Lazy-load our own lua snippets
 -- require "luasnip.loaders.from_lua".lazy_load({ paths = "~/.config/nvim/snippets" })
+
+-- ChatGPT
+local home = vim.fn.expand("$HOME")
+require "chatgpt".setup({
+    api_key_cmd = "cat " .. home .. "/.openai_api_key",
+})
