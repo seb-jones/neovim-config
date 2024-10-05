@@ -43,7 +43,6 @@ Plug 'iamcco/coc-spell-checker', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'marlonfan/coc-phpls', { 'do': 'yarn install --frozen-lockfile && yarn run build' }
 Plug 'yaegassy/coc-blade', { 'do': 'yarn install --frozen-lockfile' }
 Plug 'neoclide/coc-prettier', { 'do': 'yarn install --frozen-lockfile' }
-Plug 'github/copilot.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'nvim-telescope/telescope.nvim'
